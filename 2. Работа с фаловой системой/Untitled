@@ -1,0 +1,7 @@
+with open('visit_log.csv', 'r') as f:
+    with open('visits_context.csv', 'w') as f2write:
+        f2write.write(f.readline())
+        
+        for line in f:
+            if 'context' in line:
+                f2write.write(line)
